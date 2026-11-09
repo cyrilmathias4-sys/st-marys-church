@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Photo Gallery | St Mary's Church, Pangada</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="gallery-header">
+        <h1>Photo Gallery</h1>
+        <p>St Mary's Jacobite Syrian Orthodox Church, Pangada</p>
+    </header>
+
+    <main class="gallery-page">
+
+        <h2>Moments of Faith & Fellowship</h2>
+
+        <p>
+            A collection of beautiful memories from our church,
+            worship services and parish celebrations.
+        </p>
+
+        <div class="gallery-categories">
+    <button class="active" data-filter="all">All Photos</button>
+    <button data-filter="church">Church</button>
+    <button data-filter="qurbana">Holy Qurbana</button>
+    <button data-filter="events">Parish Events</button>
+    <button data-filter="celebrations">Celebrations</button>
+</div>
+
+        <div class="gallery-grid">
+
+    <div class="gallery-item" data-category="church">
+        <img src="assets/images/church-exterior1.jpeg"
+             alt="Church Exterior">
+    </div>
+
+    <div class="gallery-item" data-category="church">
+        <img src="assets/images/church-interior1.jpeg"
+             alt="Church Interior">
+    </div>
+
+    <div class="gallery-item" data-category="celebrations">
+        <img src="assets/images/church-celebration1.jpeg"
+             alt="Church Celebration">
+    </div>
+
+</div>
+
+        <a href="index.html" class="back-home">← Back to Home</a>
+        <!-- PHOTO LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+
+    <button class="lightbox-prev" id="lightboxPrev">&#10094;</button>
+
+    <img src="" alt="Enlarged Church Photo" id="lightboxImage">
+
+    <button class="lightbox-next" id="lightboxNext">&#10095;</button>
+
+</div>
+
+    </main>
+<script src="gallery.js"></script>
+</body>
+</html>

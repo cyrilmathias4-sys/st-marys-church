@@ -18,7 +18,7 @@ function setLanguage(language) {
   document.body.classList.toggle("ml", language === "ml");
 
   document.querySelectorAll("[data-en][data-ml]").forEach((element) => {
-    const value = element.dataset[language];
+    const value = language === "ml" ? element.getAttribute("data-ml") : element.getAttribute("data-en");
     if (value !== undefined) element.innerHTML = value;
   });
 
@@ -99,3 +99,23 @@ if (CHURCH_SETTINGS.livestreamUrl) {
 }
 
 document.getElementById("year").textContent = new Date().getFullYear();
+// Scroll reveal animation
+const revealElements = document.querySelectorAll(
+    ".church-history, .leaders .section-heading, .leader-card"
+);
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach((element) => {
+    element.classList.add("reveal");
+    revealObserver.observe(element);
+});
