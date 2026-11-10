@@ -695,3 +695,263 @@ img, iframe {
         transition: none;
     }
 }
+/* Church Contribution QR Code */
+
+.donation-qr {
+    background: #ffffff;
+    padding: 25px 20px;
+    margin: 25px auto;
+    max-width: 360px;
+    border-radius: 14px;
+    border: 1px solid #e8dfce;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.donation-qr img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 18px;
+    object-fit: contain;
+}
+
+.donation-qr h4 {
+    color: #172f38;
+    font-size: 15px;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.donation-qr p {
+    color: #b58b45;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 8px 0 0;
+}
+
+.donation-note {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .donation-qr {
+        max-width: 320px;
+        padding: 18px 14px;
+    }
+
+    .donation-qr img {
+        max-width: 270px;
+    }
+
+    .donation-qr h4 {
+        font-size: 13px;
+    }
+}
+.upi-details {
+    background: #f8f6f1;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.upi-details span {
+    display: block;
+    color: #b58b45;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.upi-details p {
+    color: #172f38;
+    font-size: 13px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    margin: 0;
+    user-select: text;
+}
+/* Navigation menu improvement */
+
+.main-nav {
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.main-nav a {
+    white-space: nowrap;
+    font-size: 11px;
+    padding: 8px 5px;
+}
+.copy-upi-btn {
+    background: #172f38;
+    color: #ffffff;
+    border: 1px solid #c9a45c;
+    padding: 11px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 5px 0 15px;
+    transition: 0.3s ease;
+}
+
+.copy-upi-btn:hover {
+    background: #c9a45c;
+    color: #172f38;
+}
+/* GOLDEN JUBILEE SECTION */
+
+.jubilee-section {
+    background: linear-gradient(135deg, #080808, #191600, #080808);
+    color: #ffffff;
+    padding: 85px 25px;
+    overflow: hidden;
+}
+
+.jubilee-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.jubilee-logo {
+    text-align: center;
+}
+
+.jubilee-logo img {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    display: block;
+    margin: auto;
+    object-fit: contain;
+}
+
+.jubilee-content {
+    text-align: left;
+}
+
+.jubilee-label {
+    color: #d4af37;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.jubilee-content h2 {
+    color: #f4d35e;
+    font-size: clamp(32px, 4vw, 48px);
+    margin: 18px 0;
+    font-family: var(--serif);
+}
+
+.jubilee-content h3 {
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.jubilee-content p {
+    color: #d5d5d5;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.jubilee-dates {
+    margin: 28px 0;
+    padding: 14px 20px;
+    border-left: 3px solid #d4af37;
+    background: rgba(212, 175, 55, 0.08);
+    color: #f4d35e;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .jubilee-section {
+        padding: 55px 20px;
+    }
+
+    .jubilee-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .jubilee-logo img {
+        max-width: 320px;
+    }
+
+    .jubilee-content {
+        text-align: center;
+    }
+
+    .jubilee-content h2 {
+        font-size: 34px;
+    }
+
+    .jubilee-content h3 {
+        font-size: 18px;
+    }
+
+    .jubilee-dates {
+        border-left: none;
+        border-top: 2px solid #d4af37;
+        padding: 18px 10px;
+    }
+}
+/* Golden Jubilee Header Logo */
+
+.brand-jubilee {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .brand-jubilee {
+        width: 34px;
+        height: 34px;
+        margin-right: 5px;
+    }
+}
+/* Golden Jubilee Logo on Homepage Banner */
+
+.hero-jubilee-logo {
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    transform: translateY(-50%);
+    width: 230px;
+    z-index: 2;
+}
+
+.hero-jubilee-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 20px rgba(212, 175, 55, 0.25));
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .hero-jubilee-logo {
+        width: 85px;
+        right: 15px;
+        top: 18px;
+        bottom: auto;
+        transform: none;
+    }
+}

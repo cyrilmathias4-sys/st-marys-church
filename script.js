@@ -119,3 +119,30 @@ revealElements.forEach((element) => {
     element.classList.add("reveal");
     revealObserver.observe(element);
 });
+// Copy Church UPI ID
+async function copyUPI() {
+    const upiID = "QR917907852449-1701@unionbankofindia";
+
+    try {
+        if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(upiID);
+        } else {
+            const input = document.createElement("textarea");
+            input.value = upiID;
+            input.style.position = "fixed";
+            input.style.opacity = "0";
+
+            document.body.appendChild(input);
+            input.select();
+
+            const copied = document.execCommand("copy");
+            input.remove();
+
+            if (!copied) throw new Error("Copy failed");
+        }
+
+        alert("UPI ID copied successfully!");
+    } catch (error) {
+        alert("Please copy the UPI ID manually: " + upiID);
+    }
+}
